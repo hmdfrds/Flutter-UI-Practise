@@ -68,6 +68,7 @@ flutter:
   - assets/open_vpn/
   - assets/smart_home_app/
   - assets/azri_travel/
+  - assets/job_search/
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.
