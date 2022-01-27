@@ -1,6 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:ui_practise/Job%20Search%20Platform/widgets/app_bar.dart';
+import 'package:ui_practise/Job%20Search%20Platform/screens/job_search_platform_2.dart';
 import 'package:ui_practise/Job%20Search%20Platform/widgets/my_card.dart';
 import 'package:ui_practise/Job%20Search%20Platform/widgets/search_bar.dart';
 
@@ -11,11 +11,35 @@ class JobSearchPlatform1 extends StatelessWidget {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        appBar: const PreferredSize(
-            preferredSize: Size.fromHeight(50),
+        resizeToAvoidBottomInset: false,
+        appBar: PreferredSize(
+            preferredSize: const Size.fromHeight(50),
             child: Padding(
-              padding: EdgeInsets.symmetric(horizontal: 15),
-              child: MyAppBar(),
+              padding: const EdgeInsets.symmetric(horizontal: 15),
+              child: AppBar(
+                backgroundColor: Colors.transparent,
+                elevation: 0,
+                leadingWidth: 0,
+                leading: IconButton(
+                  onPressed: () {},
+                  icon: const Icon(
+                    Icons.menu,
+                    color: Colors.black,
+                  ),
+                ),
+                actions: [
+                  Padding(
+                    padding: const EdgeInsets.symmetric(vertical: 5),
+                    child: ClipRRect(
+                      borderRadius: BorderRadius.circular(10),
+                      child: Image.asset(
+                        "assets/job_search/job_search_profile.jpg",
+                        fit: BoxFit.contain,
+                      ),
+                    ),
+                  )
+                ],
+              ),
             )),
         backgroundColor: const Color.fromRGBO(248, 246, 245, 1),
         body: Padding(
@@ -82,13 +106,22 @@ class JobSearchPlatform1 extends StatelessWidget {
                       flex: 10,
                       child: FittedBox(
                         fit: BoxFit.fitHeight,
-                        child: Container(
-                          padding: const EdgeInsets.all(10),
-                          decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(10),
-                              color: Colors.white),
-                          child: const Icon(
-                            Icons.filter_alt_sharp,
+                        child: GestureDetector(
+                          onTap: () {
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) =>
+                                        const JobSearchPlatform2()));
+                          },
+                          child: Container(
+                            padding: const EdgeInsets.all(10),
+                            decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(10),
+                                color: Colors.white),
+                            child: const Icon(
+                              Icons.filter_alt_sharp,
+                            ),
                           ),
                         ),
                       ),

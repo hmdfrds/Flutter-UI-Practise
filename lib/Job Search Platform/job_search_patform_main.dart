@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:ui_practise/Job%20Search%20Platform/screens/job_search_patform_1.dart';
+import 'package:ui_practise/Job%20Search%20Platform/screens/job_search_platform_2.dart';
 
 // https://dribbble.com/shots/17353253-Job-Search-Platform-Mobile-App
 
