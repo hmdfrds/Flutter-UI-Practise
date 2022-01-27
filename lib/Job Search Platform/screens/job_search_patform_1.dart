@@ -26,26 +26,25 @@ class JobSearchPlatform1 extends StatelessWidget {
             children: [
               Flexible(
                 flex: 3,
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    FittedBox(
-                      fit: BoxFit.fitHeight,
-                      child:
-                          Image.asset("assets/job_search/job_search_logo.png"),
-                    ),
-                    const SizedBox(width: 10),
-                    const FittedBox(
-                      fit: BoxFit.fitHeight,
-                      child: Text(
+                child: FittedBox(
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Image.asset(
+                        "assets/job_search/job_search_logo.png",
+                        height: 30,
+                      ),
+                      const SizedBox(width: 10),
+                      const Text(
                         "Milao",
                         style: TextStyle(
                           fontSize: 25,
                           fontWeight: FontWeight.bold,
                         ),
                       ),
-                    ),
-                  ],
+                    ],
+                  ),
                 ),
               ),
               Flexible(flex: 1, child: Container()),
@@ -99,7 +98,7 @@ class JobSearchPlatform1 extends StatelessWidget {
               ),
               Flexible(flex: 1, child: Container()),
               Flexible(
-                flex: 20,
+                flex: 17,
                 child: Row(
                   children: const [
                     MyCard(
@@ -136,7 +135,7 @@ class JobSearchPlatform1 extends StatelessWidget {
                   )),
               Flexible(flex: 1, child: Container()),
               Flexible(
-                flex: 20,
+                flex: 17,
                 child: Row(
                   children: const [
                     MyCard(
